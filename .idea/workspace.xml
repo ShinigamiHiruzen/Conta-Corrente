@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f852704-1d42-4017-9783-f18c3ba87986" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exception/ECampoInvalidoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conta/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/ContaCorrente.java" afterDir="false" />
-    </list>
+    <list default="true" id="0f852704-1d42-4017-9783-f18c3ba87986" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +58,7 @@
       <updated>1696726652382</updated>
       <workItem from="1696726655468" duration="334000" />
       <workItem from="1696728080377" duration="1454000" />
-      <workItem from="1696791914604" duration="1298000" />
+      <workItem from="1696791914604" duration="1642000" />
     </task>
     <task id="LOCAL-00001" summary="Created classes ESaldoInsuficienteException and EValorInvalidoException for exception non-monitoring and exception monitoring">
       <created>1696729750309</created>
@@ -71,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696729750309</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finished class ContaCorrente">
+      <created>1696794953365</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696794953365</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,6 +82,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created classes ESaldoInsuficienteException and EValorInvalidoException for exception non-monitoring and exception monitoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created classes ESaldoInsuficienteException and EValorInvalidoException for exception non-monitoring and exception monitoring" />
+    <MESSAGE value="Finished class ContaCorrente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished class ContaCorrente" />
   </component>
 </project>

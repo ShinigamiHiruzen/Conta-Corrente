@@ -13,11 +13,13 @@ public class ContaCorrente {
     private String nome;
 
     public ContaCorrente(int agencia, int numeroConta, String nome, String cpf){
-        this.agencia = agencia;
-        this.numeroConta = numeroConta;
-        this.nome = nome;
-        this.cpf = cpf;
-        saldo = 0;
+        if (validarCampos(nome, cpf)){
+            this.agencia = agencia;
+            this.numeroConta = numeroConta;
+            this.nome = nome;
+            this.cpf = cpf;
+            saldo = 0;
+        }
     }
 
     public int getAgencia() {
@@ -28,10 +30,14 @@ public class ContaCorrente {
         return numeroConta;
     }
 
-    public void alterarDados(String nome, String cpf){
+    private boolean validarCampos(String nome, String cpf){
         if (cpf.length()!=12){
             throw new ECampoInvalidoException("CPF inválido.");
-        } else if (nome.matches("^[a-zA-Z\\s']+")) {
+        }
+        return nome.matches("^[a-zA-Z\\s']+");
+    }
+    public void alterarDados(String nome, String cpf){
+        if (validarCampos(nome, cpf)){
             this.nome = nome;
             this.cpf = cpf;
         }

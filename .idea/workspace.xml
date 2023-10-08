@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f852704-1d42-4017-9783-f18c3ba87986" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/conta/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/ContaCorrente.java" afterDir="false" />
-    </list>
+    <list default="true" id="0f852704-1d42-4017-9783-f18c3ba87986" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696726652382</updated>
       <workItem from="1696726655468" duration="334000" />
-      <workItem from="1696728080377" duration="277000" />
+      <workItem from="1696728080377" duration="1149000" />
     </task>
     <servers />
   </component>

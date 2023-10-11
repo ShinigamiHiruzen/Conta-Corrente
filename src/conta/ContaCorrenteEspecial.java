@@ -1,9 +1,10 @@
 package conta;
 
+import Check.ValidationFieldsBank;
 import exception.ESaldoInsuficienteException;
 import exception.EValorInvalidoException;
 
-public class ContaCorrenteEspecial extends ContaCorrente{
+public class ContaCorrenteEspecial extends ContaCorrente implements ValidationFieldsBank {
 
     private float limiteCredito;
 
@@ -12,13 +13,6 @@ public class ContaCorrenteEspecial extends ContaCorrente{
         if (validacaoLimiteCredito(limiteCredito)){
             this.limiteCredito = limiteCredito;
         }
-    }
-
-    private boolean validacaoLimiteCredito(float limiteCredito){
-        if (limiteCredito <= 0){
-            throw new EValorInvalidoException("O valor do crédito deve ser positivo.");
-        }
-        return true;
     }
 
     public float getLimiteCredito() {
@@ -30,9 +24,9 @@ public class ContaCorrenteEspecial extends ContaCorrente{
         if (valor <= 0){
             throw new EValorInvalidoException("O valor do saque deve ser positivo.");
         }
-        if (valor <= saldo + limiteCredito){
-            saldo -= valor;
-        }else {
+       if (limiteCredito > 0 && valor <= limiteCredito) {
+            limiteCredito -= valor;
+        }else  {
             throw new ESaldoInsuficienteException("Saldo e limite de crédito insuficiente para o saque.");
         }
     }

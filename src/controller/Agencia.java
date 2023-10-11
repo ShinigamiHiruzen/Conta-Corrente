@@ -1,6 +1,6 @@
 package controller;
 
-import Check.ValidationFieldsBank;
+import check.ValidationFieldsBank;
 import conta.ContaCorrente;
 import conta.ContaCorrenteEspecial;
 import exception.EContaNaoExisteException;

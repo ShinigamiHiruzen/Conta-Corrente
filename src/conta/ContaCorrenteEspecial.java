@@ -1,6 +1,6 @@
 package conta;
 
-import Check.ValidationFieldsBank;
+import check.ValidationFieldsBank;
 import exception.ESaldoInsuficienteException;
 import exception.EValorInvalidoException;
 

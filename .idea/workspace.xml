@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f852704-1d42-4017-9783-f18c3ba87986" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Check/ValidationFieldsBank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conta/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/ContaCorrente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/conta/ContaCorrenteEspecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/ContaCorrenteEspecial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Agencia.java" afterDir="false" />
-    </list>
+    <list default="true" id="0f852704-1d42-4017-9783-f18c3ba87986" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +62,7 @@
       <workItem from="1696791914604" duration="8172000" />
       <workItem from="1696899924426" duration="2873000" />
       <workItem from="1696967553303" duration="123000" />
-      <workItem from="1696970557381" duration="8185000" />
+      <workItem from="1696970557381" duration="8507000" />
     </task>
     <task id="LOCAL-00001" summary="Created classes ESaldoInsuficienteException and EValorInvalidoException for exception non-monitoring and exception monitoring">
       <created>1696729750309</created>
@@ -112,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696798741109</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="created interface ValidationFieldsBank">
+      <created>1696984943346</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696984943346</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +126,7 @@
     <MESSAGE value="created class ContaCorrenteEspecial" />
     <MESSAGE value="finished class ContaCorrenteEspecial" />
     <MESSAGE value="created class agencia" />
-    <option name="LAST_COMMIT_MESSAGE" value="created class agencia" />
+    <MESSAGE value="created interface ValidationFieldsBank" />
+    <option name="LAST_COMMIT_MESSAGE" value="created interface ValidationFieldsBank" />
   </component>
 </project>

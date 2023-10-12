@@ -6,13 +6,13 @@ import exception.EValorInvalidoException;
 
 public class ContaCorrente implements ValidationFieldsBank {
 
-    private int agencia;
+    private String agencia;
     private int numeroConta;
     protected float saldo;
     private String cpf;
     private String nome;
 
-    public ContaCorrente(int agencia, int numeroConta, String nome, String cpf){
+    public ContaCorrente(String agencia, int numeroConta, String nome, String cpf){
         if (validarNomes(nome) && validarCpf(cpf)){
             this.agencia = agencia;
             this.numeroConta = numeroConta;
@@ -22,7 +22,7 @@ public class ContaCorrente implements ValidationFieldsBank {
         }
     }
 
-    public int getAgencia() {
+    public String getAgencia() {
         return agencia;
     }
 
@@ -40,21 +40,23 @@ public class ContaCorrente implements ValidationFieldsBank {
         }
     }
 
-    public void saque(float valor) throws ESaldoInsuficienteException{
+    public float saque(float valor) throws ESaldoInsuficienteException{
         if (valor <= 0){
             throw new EValorInvalidoException("O valor do saque deve ser positivo.");
         }
         if (saldo>0 && valor <= saldo){
             saldo -= valor;
+            return saldo;
         }else {
             throw new ESaldoInsuficienteException("Saldo insuficiente para efetuar o saque.");
         }
     }
-    public void deposito(float valor){
+    public float deposito(float valor){
         if (valor <= 0){
             throw new EValorInvalidoException("O valor do depósito deve ser positivo.");
         }
         saldo += valor;
+        return valor;
     }
 
 }

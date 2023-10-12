@@ -13,7 +13,6 @@ public class Agencia implements ValidationFieldsBank {
     private String numeroAgencia;
     private String local;
     private String nomeGerente;
-
     private List<ContaCorrente> contaCorrenteList;
 
     public Agencia(String numeroAgencia, String local, String nomeGerente) {
@@ -25,13 +24,14 @@ public class Agencia implements ValidationFieldsBank {
         }
     }
 
-    public void cadastrarContaCorrente(int agencia, int numeroConta, String nome, String cpf){
-        ContaCorrente contaCorrente = new ContaCorrente(agencia, numeroConta, nome, cpf);
+    public void cadastrarContaCorrente(String numeroAgencia, int numeroConta, String nome, String cpf){
+        ContaCorrente contaCorrente = new ContaCorrente(numeroAgencia, numeroConta, nome, cpf);
         contaCorrenteList.add(contaCorrente);
     }
 
-    public void cadastrarContaCorrenteEspecial(int agencia, int numeroConta, String nome, String cpf, float credito) {
-        ContaCorrente contaCorrente = new ContaCorrenteEspecial(agencia, numeroConta, nome, cpf, credito);
+    public void cadastrarContaCorrenteEspecial(String numeroAgencia, int numeroConta, String nome, String cpf,
+                                               float credito) {
+        ContaCorrente contaCorrente = new ContaCorrenteEspecial(numeroAgencia, numeroConta, nome, cpf, credito);
         contaCorrenteList.add(contaCorrente);
     }
 
@@ -41,16 +41,16 @@ public class Agencia implements ValidationFieldsBank {
                 return contaCorrente;
             }
         }
-        throw new EContaNaoExisteException("Esse cpf não está associado a nenhuma conta.");
+        throw new EContaNaoExisteException("Este cpf não está associado a nenhuma conta.");
     }
 
-    public String buscarCpf(String cpf) throws EContaNaoExisteException {
+    public String buscarCpf(int numeroConta) throws EContaNaoExisteException {
         for (ContaCorrente contaCorrente : contaCorrenteList){
-            if (contaCorrente.getCpf().equals(cpf)){
-                return cpf;
+            if (contaCorrente.getNumeroConta()==numeroConta){
+                return contaCorrente.getCpf();
             }
         }
-        throw new EContaNaoExisteException("Esse cpf não está associado a nenhuma conta.");
+        throw new EContaNaoExisteException("Este número não está associado a nenhuma conta.");
     }
 
     public String getNumeroAgencia() {

@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f852704-1d42-4017-9783-f18c3ba87986" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Check/ValidationFieldsBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/check/ValidationFieldsBank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/conta/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/ContaCorrente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/conta/ContaCorrenteEspecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/ContaCorrenteEspecial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Agencia.java" afterDir="false" />
@@ -48,6 +49,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/eduar/OneDrive/Documentos/Github/Conta-Corrente&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -69,6 +71,14 @@
       <workItem from="1696967553303" duration="123000" />
       <workItem from="1696970557381" duration="9989000" />
       <workItem from="1696989987862" duration="773000" />
+      <workItem from="1696991082502" duration="113000" />
+      <workItem from="1696995280035" duration="10000" />
+      <workItem from="1696996702317" duration="291000" />
+      <workItem from="1697000642388" duration="5619000" />
+      <workItem from="1697046490272" duration="1697000" />
+      <workItem from="1697060299981" duration="4195000" />
+      <workItem from="1697066718782" duration="3627000" />
+      <workItem from="1697076247572" duration="2461000" />
     </task>
     <task id="LOCAL-00001" summary="Created classes ESaldoInsuficienteException and EValorInvalidoException for exception non-monitoring and exception monitoring">
       <created>1696729750309</created>
@@ -133,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696990740799</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="renamed package Check for check">
+      <created>1696991163356</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696991163356</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +167,7 @@
     <MESSAGE value="created class EContaNaoExisteException" />
     <MESSAGE value="created class EContaNaoExisteException for exception monitoring" />
     <MESSAGE value="finished class Agencia" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished class Agencia" />
+    <MESSAGE value="renamed package Check for check" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed package Check for check" />
   </component>
 </project>

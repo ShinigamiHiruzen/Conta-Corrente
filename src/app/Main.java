@@ -20,6 +20,7 @@ public class Main {
         boolean validacaoConta = false;
         String numeroAgencia = null, numeroAgenciaCliente = null, identificadorCpf = null;
         int buscarCpf;
+        float verSaldo = 0;
         List<Agencia> agenciaList = new ArrayList<>();
 
         do {
@@ -42,9 +43,7 @@ public class Main {
                                         -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
                                                    BEM-VINDO GERENTE
                                         -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-                                        | 1 - Criar Agência
-                                        | 2 - Buscar Conta
-                                        | 3 - Buscar CPF
+                                        | 1 - Criar Agência                                  
                                         | 9 - Sair
                                         """);
 
@@ -54,7 +53,7 @@ public class Main {
 
                                             case 1 -> {
                                                 do {
-                                                    System.out.println("Digite um número para a agência");
+                                                    System.out.println("Digite um número para a agência: ");
                                                     numeroAgencia = sc.next();
                                                     for (Agencia agenciaSearch : agenciaList) {
                                                         if (agenciaSearch.getNumeroAgencia().equals(numeroAgencia)) {
@@ -94,6 +93,7 @@ public class Main {
                                         | 4 - Depositar    
                                         | 5 - Lista de Agências Disponíveis  
                                         | 6 - Alterar Dados
+                                        | 7 - Consultar Saldo
                                         | 9 - Sair                               
                                         """);
                                         opcaoCliente = sc.nextInt();
@@ -170,7 +170,7 @@ public class Main {
                                                             System.out.println("CONTA LOCALIZADA COM SUCESSO!");
                                                             System.out.println("Digite o valor que deseja sacar: ");
                                                             float valor = sc.nextFloat();
-                                                            float verSaldo = contaCorrente.saque(valor);
+                                                            verSaldo = contaCorrente.saque(valor);
                                                             System.out.println("SAQUE REALIZADO COM SUCESSO!!!");
                                                             System.out.println("VOCÊ SACOU R$" + valor);
                                                             System.out.println("O SEU SALDO ATUALMENTE É R$" + verSaldo);
@@ -199,7 +199,7 @@ public class Main {
                                                             System.out.println("CONTA LOCALIZADA COM SUCESSO!");
                                                             System.out.println("Digite o valor que deseja depositar: ");
                                                             float valor = sc.nextFloat();
-                                                            float verSaldo = contaCorrente.deposito(valor);
+                                                            verSaldo = contaCorrente.deposito(valor);
                                                             System.out.println("DEPOSITO REALIZADO COM SUCESSO!!!");
                                                             System.out.println("VOCÊ DEPOSITOU R$" + valor);
                                                             System.out.println("O SEU SALDO ATUALMENTE É R$" + verSaldo);
@@ -243,6 +243,26 @@ public class Main {
                                                             String cpf = sc.next();
                                                             contaCorrente.alterarDados(nome, cpf);
                                                             System.out.println("DADOS ALTERADOS COM SUCESSO");
+                                                            validacaoConta = true;
+                                                        } catch (EContaNaoExisteException e) {
+                                                            System.out.println("Error: " + e);
+                                                            validacaoConta = false;
+                                                        }
+                                                    }else {
+                                                        validacaoConta = true;
+                                                    }
+                                                }while (!validacaoConta);
+                                            }
+
+                                            case 7 -> {
+                                                do{
+                                                    System.out.println("Digite o numero da sua conta");
+                                                    buscarCpf = sc.nextInt();
+                                                    if (buscarCpf != 0){
+                                                        try {
+                                                            identificadorCpf = agencia.buscarCpf(buscarCpf);
+                                                            contaCorrente = agencia.buscarConta(identificadorCpf);
+                                                            System.out.println("O seu saldo é R$" + verSaldo);
                                                             validacaoConta = true;
                                                         } catch (EContaNaoExisteException e) {
                                                             System.out.println("Error: " + e);

@@ -33,6 +33,7 @@ public class ContaCorrente implements ValidationFieldsBank {
     public String getCpf() {
         return cpf;
     }
+
     public void alterarDados(String nome, String cpf){
         if (validarNomes(nome) && validarCpf(cpf)){
             this.nome = nome;

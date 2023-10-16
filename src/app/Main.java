@@ -119,11 +119,11 @@ public class Main {
                                                 agencia.cadastrarContaCorrente(numeroAgenciaCliente, numeroConta,
                                                         nome, cpf);
                                                 validacaoConta = true;
+                                                System.out.println("CONTA CRIADA COM SUCESSO!!!");
                                             }
                                         }
                                     } while (!validacaoConta);
                                     validacaoConta = false;
-                                    System.out.println("CONTA CRIADA COM SUCESSO!!!");
                                 }
 
                                 case 2 -> {
@@ -144,11 +144,11 @@ public class Main {
                                                 agencia.cadastrarContaCorrenteEspecial(numeroAgenciaCliente, numeroConta,
                                                         nome, cpf, limiteCredito);
                                                 validacaoConta = true;
+                                                System.out.println("CONTA CRIADA COM SUCESSO!!!");
                                             }
                                         }
                                     } while (!validacaoConta);
                                     validacaoConta = false;
-                                    System.out.println("CONTA CRIADA COM SUCESSO!!!");
                                 }
 
                                 case 3 -> {

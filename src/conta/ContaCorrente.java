@@ -37,6 +37,9 @@ public class ContaCorrente implements ValidationFieldsBank {
     public float getSaldo() {
         return saldo;
     }
+    public String getNome() {
+        return nome;
+    }
 
     public void alterarDados(String nome, String cpf){
         if (validarNomes(nome) && validarCpf(cpf)){
@@ -45,23 +48,21 @@ public class ContaCorrente implements ValidationFieldsBank {
         }
     }
 
-    public float saque(float valor) throws ESaldoInsuficienteException{
+    public void saque(float valor) throws ESaldoInsuficienteException{
         if (valor <= 0){
             throw new EValorInvalidoException("O valor do saque deve ser positivo.");
         }
         if (saldo>0 && valor <= saldo){
             saldo -= valor;
-            return saldo;
+
         }else {
             throw new ESaldoInsuficienteException("Saldo insuficiente para efetuar o saque.");
         }
     }
-    public float deposito(float valor){
+    public void deposito(float valor){
         if (valor <= 0){
             throw new EValorInvalidoException("O valor do depósito deve ser positivo.");
         }
         saldo += valor;
-        return valor;
     }
-
 }

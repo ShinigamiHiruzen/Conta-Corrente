@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f852704-1d42-4017-9783-f18c3ba87986" name="Changes" comment="" />
+    <list default="true" id="0f852704-1d42-4017-9783-f18c3ba87986" name="Changes" comment="finished aplication 3.1">
+      <change afterPath="$PROJECT_DIR$/src/exception/EAgenciaNaoExisteException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/check/ValidationFieldsBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/check/ValidationFieldsBank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conta/ContaCorrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/ContaCorrente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/conta/ContaCorrenteEspecial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/conta/ContaCorrenteEspecial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Agencia.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +83,10 @@
       <workItem from="1697076247572" duration="3437000" />
       <workItem from="1697080348365" duration="2346000" />
       <workItem from="1697082770667" duration="132000" />
-      <workItem from="1697497387739" duration="2212000" />
+      <workItem from="1697497387739" duration="2369000" />
+      <workItem from="1697530435191" duration="704000" />
+      <workItem from="1697581815281" duration="3893000" />
+      <workItem from="1697680401760" duration="5641000" />
     </task>
     <task id="LOCAL-00001" summary="Created classes ESaldoInsuficienteException and EValorInvalidoException for exception non-monitoring and exception monitoring">
       <created>1696729750309</created>
@@ -180,6 +191,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created classes ESaldoInsuficienteException and EValorInvalidoException for exception non-monitoring and exception monitoring" />

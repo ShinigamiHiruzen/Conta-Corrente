@@ -3,6 +3,7 @@ package controller;
 import check.ValidationFieldsBank;
 import conta.ContaCorrente;
 import conta.ContaCorrenteEspecial;
+import exception.EAgenciaNaoExisteException;
 import exception.EContaNaoExisteException;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ public class Agencia implements ValidationFieldsBank {
         }
     }
 
-    public void cadastrarContaCorrente(String numeroAgencia, int numeroConta, String nome, String cpf){
+    public void cadastrarContaCorrente(String numeroAgencia, int numeroConta, String nome, String cpf) {
         ContaCorrente contaCorrente = new ContaCorrente(numeroAgencia, numeroConta, nome, cpf);
         contaCorrenteList.add(contaCorrente);
     }
@@ -53,6 +54,23 @@ public class Agencia implements ValidationFieldsBank {
         throw new EContaNaoExisteException("Este número não está associado a nenhuma conta.");
     }
 
+    public String buscarAgencia(String numeroAgencia) throws EAgenciaNaoExisteException {
+        for (ContaCorrente contaCorrente:contaCorrenteList
+             ) {
+            if (contaCorrente.getAgencia().equals(numeroAgencia)){
+                return contaCorrente.getAgencia();
+            }
+        }
+        throw new EAgenciaNaoExisteException("Não tem nenhuma agência com esse número.");
+    }
+
+    public void buscarNumeroConta(int numeroConta) throws EContaNaoExisteException{
+        for (ContaCorrente contaCorrente : contaCorrenteList) {
+            if (contaCorrente.getNumeroConta()==numeroConta){
+                throw new EContaNaoExisteException("Já existe uma conta com esse número.");
+            }
+        }
+    }
     public String getNumeroAgencia() {
         return numeroAgencia;
     }

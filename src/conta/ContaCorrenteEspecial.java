@@ -23,14 +23,15 @@ public class ContaCorrenteEspecial extends ContaCorrente implements ValidationFi
     public float getSaldo() {
         return super.getSaldo() + limiteCredito;
     }
+
     @Override
-    public float saque(float valor) throws ESaldoInsuficienteException {
+    public void saque(float valor) throws ESaldoInsuficienteException {
         if (valor <= 0){
             throw new EValorInvalidoException("O valor do saque deve ser positivo.");
         }
+
        if (limiteCredito > 0 && valor <= limiteCredito) {
             limiteCredito -= valor;
-            return limiteCredito;
         }else  {
             throw new ESaldoInsuficienteException("Saldo e limite de crédito insuficiente para o saque.");
         }
